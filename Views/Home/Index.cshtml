@@ -1,0 +1,46 @@
+﻿@model CRUDOptMVC.Models.Ad_login
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <form class="form-horizontal">
+                asp-action="Index">
+
+                <div class="form-group">
+                    <label class="custom-control-label"> User Name</label>
+                    <input asp-for="user_name" class="form-control" type="text" />
+
+                </div>
+
+                <div class="form-group">
+                    <label class="custom-control-label"> Password</label>
+                    <input asp-for="password_" class="form-control" type="password" />
+
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Submit" />
+                </div>
+
+            </form>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+
+</div>
+
+@{ 
+    if(TempData["msg"] != null)
+            {
+    <script>
+             alert('@TempData["msg"]')
+    </script>
+               
+
+            }
+
+}
